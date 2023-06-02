@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body{
+            width: 100vw;
+            text-align: center;
+            padding-top: 10px;
+            background-color: black;
+        }
+
+        .card-container{
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .flip-card{
+            width: 230px;
+            height: 230px;
+            border-radius: 20px;
+            perspective: 1000px;
+            background-color: transparent;
+        }
+        .flip-card-inner{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner{
+            transform: rotateY(180deg);
+        }
+        .flip-card:hover{
+            cursor: pointer;
+        }
+        .flip-card-front , .flip-card-back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: grid;
+            place-items: center;
+        }
+        .flip-card-front{
+            display: grid;
+            place-items: center;
+            border: 1px solid rgb(221, 218, 218);
+            border-radius: 10px;
+
+        }
+        .flip-card-back{
+            background-color: whitesmoke;
+            transform: rotateY(180deg);
+            box-shadow: 10px 10px 10px rgb(94, 91, 86);
+            border-radius: 10px;
+        }
+        .flip-card-front img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            border-radius: 10px;
+        }
+        .flip-card-back h3{
+            color: rgb(198, 128, 36);
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+             <!-- card1 -->
+        <div class="card-1 flip-card">
+            <div class="flip-card-inner">
+                <!-- front  -->
+                <div class="flip-card-front">
+                    <img src="./Bedroom 2 View 01.jpg" alt="">
+                </div>
+                <!-- back  -->
+                <div class="flip-card-back">
+                    <h3>design</h3>
+                </div>
+            </div>
+        </div>
+                <!-- card1 -->
+        <div class="card-1 flip-card">
+            <div class="flip-card-inner">
+                <!-- front  -->
+                <div class="flip-card-front">
+                    <img src="./yard 1.jpg" alt="">
+                </div>
+                <!-- back  -->
+                <div class="flip-card-back">
+                    <h3>design</h3>
+                </div>
+            </div>
+        </div>
+                <!-- card1 -->
+        <div class="card-1 flip-card">
+            <div class="flip-card-inner">
+                <!-- front  -->
+                <div class="flip-card-front">
+                    <img src="./yard2.jpg" alt="">
+                </div>
+                <!-- back  -->
+                <div class="flip-card-back">
+                    <h3>design</h3>
+                </div>
+            </div>
+        </div>
+               <!-- card1 -->
+               <div class="card-1 flip-card">
+                <div class="flip-card-inner">
+                    <!-- front  -->
+                    <div class="flip-card-front">
+                        <img src="./yard2.jpg" alt="">
+                    </div>
+                    <!-- back  -->
+                    <div class="flip-card-back">
+                        <h3>design</h3>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>
